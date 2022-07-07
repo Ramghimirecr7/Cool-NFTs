@@ -144,7 +144,10 @@ contract MyCoolNFT is ERC721URIStorage {
         console.log("--------------------\n");
         // mint the NFT to the sender using msg.sender.
         _safeMint(msg.sender, newItemId);
-        _setTokenURI(newItemId, finalTokenUri);
+        _setTokenURI(
+            newItemId,
+            "ipfs://QmZKRQFRQFrjaz8Dx5SKSPyeVW31q7n7GTCBvx4yQPWJEo"
+        );
 
         // Increment the counter for when the next NFT is minted.
         _tokenIds.increment();
